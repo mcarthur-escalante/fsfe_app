@@ -1,0 +1,1 @@
+* * * * * sh /var/www/app/github.sh 2>&1 | logger -t github.sh
