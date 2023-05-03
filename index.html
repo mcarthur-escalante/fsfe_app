@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FSFE Application</title>
+  </head>
+  <body>
+    <script>
+      let ws;
+      const protocol = window.location.protocol === "https:" ? "wss" : "ws";
+      ws = new WebSocket(`${protocol}://${window.location.host}`);
+      ws.onmessage = (event) => {
+        console.log(event.data);
+      };
+    </script>
+  </body>
+</html>
